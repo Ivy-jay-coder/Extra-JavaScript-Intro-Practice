@@ -675,7 +675,7 @@ foreignId = []
 function countryId(array, country){
 for (let i = 0; i < array.length; i++){
   if(foreignId.push(array[i])){
-    return array[i]
+    return foreignId.push(array[i])
   }
   
 }
