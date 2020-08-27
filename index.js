@@ -1,4 +1,4 @@
-/* SCROLL PAST THE DATA TO START THE TAKS - NOTE do not use any advanced array methods - .forEach(), .map(), .filter() and .reduce() are forbidden today  */
+/* SCROLL PAST THE DATA TO START THE TASK - NOTE do not use any advanced array methods - .forEach(), .map(), .filter() and .reduce() are forbidden today  */
 const airports = [
     {
       "code": "AAA",
@@ -567,65 +567,140 @@ const airports = [
 // console.log("Function was invoked!");
 // };
 // myFunction();
+let myFunction = () => 
 
-
+console.log(myfunction());
 // let anotherFunction = function (param) {
 //   return param;
 // };
 // anotherFunction("Example");
+let anotherFunction = (param) => param;
 
-
+console.log(anotherFunction("Example"));
 // let add = function (param1, param2) {
 //   return param1 + param2;
 // };
 // add(1,2);
+let add = (param1,param2) => param1 + param2;
 
-
+console.log(add(1,2));
 // let subtract = function (param1, param2) {
 //   return param1 - param2;
 // };
 // subtract(1,2);
+let subtract = (param1,param2) => param1 - param2;
 
-
+console.log(subtract(1,2));
 /* Work out 💪 */
 /* TASK 1 🚀 
 // Dollars to Euros - write a function that will take an amount of dollars (USD) and change it  into euros (EUR) - with the current exchange rate 1 USD === .85 EUR */
 
+let dollarsToEuros = dollars => dollars * .85;
+  
+console.log(dollarsToEuros(1));
 
 /* TASK 2 🚀 
-// Take the function above a step further - you have dollars and you are visiting the following 5 countries: Britan, Germany, Turkey, Bulgaria and Ukraine - you need to write a function that will take a dollar amount, and a country and return the exchange rate for that country - the function should return a string that says `your exchange rate for dollarAmount dollars in country will be exchangeRate currencyInitals ` If the country is not on your list your string should return 'that country is not on your list'
+// Take the function above a step further - you have dollars and you are visiting the following 5 countries: Britian, Germany, Turkey, Bulgaria and Ukraine - you need to write a function that will take a dollar amount, and a country and return the exchange rate for that country - the function should return a string that says `your exchange rate for dollarAmount dollars in country will be exchangeRate currencyInitals ` If the country is not on your list your string should return 'that country is not on your list'
 // 1 usd === 0.85 euro
 // 1 usd === 0.77 British Pounds
 // 1 usd === 6.96 Turkish Lira 
 // 1 usd === 1.66 Bulgarian Lev 
 // 1 usd === 27.7 Ukrainian hryvnia */
 
+function currency(dollarAmount,country){
+  
+  if(country == "Britian"){
+    return `Your exchange rate for ${dollarAmount} dollars in ${country} will be ${dollarAmount * .77} British Pounds`
+  }
+  if(country == "Germany"){
+    return `Your exchange rate for ${dollarAmount} dollars in ${country} will be ${dollarAmount * .85} euro`
+  }
+  if(country == "Turkey"){
+    return `Your exchange rate for ${dollarAmount} dollars in ${country} will be ${dollarAmount * 6.96} Turkish Lira`
+  }
+  if(country == "Bulgaria"){
+    return `Your exchange rate for ${dollarAmount} dollars in ${country} will be ${dollarAmount * 1.66}
+    Bulgarian Lev`
+  }
+  if(country == "Ukraine"){
+    return `Your exchange rate for ${dollarAmount} dollars in ${country} will be ${dollarAmount * 27.7}
+    Ukrainian hryvnia`
+  }
+  else
+    return 'that country is not on your list'
+  } 
+
+  
+
+console.log(currency(6,"Britian"));//should return 6 * .77
+console.log(currency(8,"Germany"));//should return 8 * .85
+console.log(currency(12,"Turkey"));//should return 12 * 6.96
+console.log(currency(15,"Bulgaria"));//should return 15 * 1.66
+console.log(currency(35,"Ukraine"));//should return 35 * 27.7
 
 /*TASK 3 🚀
 /// Write a function that takes an airport code and returns the city, country of that airport 
 // find the following codes AAA, ABZ, ABX, ABT, ACA */
+  //function codes (AAA, ABZ, ABX, ABT, ACA){
+    
+    function codegrabber (arr, code){
+  for(let i= 0; i < arr.length;i++){
+    if(arr[i].code == code){
+    console.log(arr[i].city);
+    console.log(arr[i].country);
 
+  }
+}
+    }
+  codegrabber(airports,"AAA")
+  codegrabber(airports,"ABZ")
+  codegrabber(airports,"ABX")
+  codegrabber(airports,"ABT")
+  codegrabber(airports,"ACA")
 
 /*TASK 4 🚀 
-// Write a function to that will find the phone number for an airport in a given city  */
-
-
+// Write a function that will find the phone number for an airport in a given city  */
+function telly(array,city,/*phone*/){
+  for (let i = 0; i < array.length; i++){
+    if(array[i].city === city){
+    return `${array[i].city} and ${array[i].phone}`;
+  }
+}
+}
+console.log(telly(airports, "Allentown"))
 
 /*TASK 5 🚀 
 // Write a function that will return all the airports in a given country  */
-
-
+foreignId = []
+function countryId(array, country){
+for (let i = 0; i < array.length; i++){
+  if(foreignId.push(array[i])){
+    return array[i]
+  }
+  
+}
+}
+console.log(countryId(airports, "United States"));
 
 /*TASK 6 🚀 
 // Write a function that takes and airport name and returns the airport code
 // find the code for the following airports: Al Baha Airport, Ambler Airport, Abuja International Airport*/
+/*function justPlane(airports){
+  for(i =0; i < arr.length;i++)
+}if(airports[i].name === name)
+console.log(airports[i].name)
 
+*/
 
 
 /*TASK 7 🚀
 // Write a function that takes an airport code and returns the number of direct flights available */
-
-
+/*function nonStops(array,direct_flights){
+  for (let i = 0; i < array.length; i++){
+    if 
+  }
+}
+*/
 
 /*TASK 8 🚀
 // Find out what your flight options are - write a function that returns a new array of all the country names in a set of data*/
